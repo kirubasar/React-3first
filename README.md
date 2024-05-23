@@ -1,8 +1,13 @@
 # React + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This is a `React + Vite project` created for the batch `FSD59WD-T` to demonstrate the concepts of React.
 
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Git Commands 
+  
+git init - Create a new git repository
+git status - View the changes to your project code (whether it is staged or not)
+git add - Add files to staging area
+git commit - Create a new commit with files from staging area
+git push - Push the changes / commits to the remote repository 
+git pull - pull the changes from the remote repository
+git log - View the 
