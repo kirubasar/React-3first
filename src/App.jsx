@@ -1,19 +1,18 @@
-  import Hello from "./components/Hello";
-   
-   
   const App = () => {
-    const a = 20;
-    const b = 40;
-    const now = new Date();
-    const  name = 'sri';
+    const friends = [
+   {id: 1, name: 'John',age: 30},
+   {id: 2, name: 'peter', age: 20}
+    ]
   return (
     <div>
-      Date: {now.toString()}
-   <h1>Greetings</h1>
-    <Hello 
-    name={name}
-    />
-    <p>{a} plus {b} is {a+b}</p>
+     <h1>Friends</h1> 
+     <ul>
+      {
+        friends.map((friend, index) =>
+          <li key={index}>{friend.name} {friend.age}</li>
+        )
+      }
+     </ul>
   </div>
   )
 }
