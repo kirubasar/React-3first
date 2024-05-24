@@ -1,13 +1,27 @@
-# React + Vite
+# React - Day-4: React components
 
-This is a `React + Vite project` created for the batch `FSD59WD-T` to demonstrate the concepts of React.
+## Contents:
+-[x] Components - In-depth
+-[ ] Component life cycle
+-[ ] Stateful and stateless components
+-[ ] Reusable commponents
+-[ ] Passing dynamic data to component
+-[ ] Introduction to Hook
 
-## Git Commands 
-  
-git init - Create a new git repository
-git status - View the changes to your project code (whether it is staged or not)
-git add - Add files to staging area
-git commit - Create a new commit with files from staging area
-git push - Push the changes / commits to the remote repository 
-git pull - pull the changes from the remote repository
-git log - View the 
+Components: Can be created in two ways:
+1. Functional components
+   - Functional components are also called as stateless components.
+   - Component life cycle does not apply to functional components.
+   - are efficient than class components.
+   - states can be used in functional components using hooks.
+2. Class components
+   - Class components are also lcalled as stateful components.
+   - Component life cycle applies to class components.
+
+Functional Components are better than class components for the following reasons:
+- Functional components are easier to read and test.
+- Functional components help you avoid `this` keyword and the confusion around it.
+- Functional components can be easily extracted as separate function. 
+- Functional  components can be better optimized by React/
+- Functional components are less code. 
+- Functional components are faster than class components.

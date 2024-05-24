@@ -1,28 +1,35 @@
-  import Todo from "./components/Todo";
-  const App = () => {
-    const todos = [
-      {id: 1, title: 'Buy milk', completed: false},
-      {id: 2, title: 'Buy bread', completed: true},
-      {id: 3, title: 'Buy butterr', completed: false}
-    ]
- 
-  return (
+ //Functional Component
+ /*const App = () => {
+return (
+  <div>
+    <h1> My React App</h1>
+  </div>
+)
+ }
+
+ export default App;*/
+
+ // Functional Component with function 
+ /*function App () {
+  return(
     <div>
-      <h1>Todo List</h1>
-      <ul>
-          {
-            todos.map(todo => 
-              <Todo 
-              key={todo.id}
-              todo={todo}
-              />
-            )
-          }
-      </ul>
-    </div>
-  
-   
-  )
-}
-  
-export default App;
+    <h1> My React App</h1>
+  </div>
+)
+ }
+
+ export default App;*/
+import { Component } from "react";
+ //Class Component
+ class App extends Component{
+  // override the render method
+  render(){
+    //return JSX
+    return (
+      <div>
+    <h1> My React App</h1>
+  </div>
+    )
+  }
+ }
+ export default App;
