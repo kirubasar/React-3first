@@ -4,13 +4,14 @@
     super(props);//call the constructor of the parent class
   //set the initial state
   this.state = {
-    counter: 0
+    counter: 10
   }
 }
   handleIncrement = () => {
 // update the state using the setState method
+if (this.state.counter > 0)
 this.setState({
-  counter: this.state.counter + 1
+  counter: this.state.counter - 1
 })
   }
   render(){
@@ -18,7 +19,7 @@ this.setState({
     return (
       <div>
         <p> Count: {this.state.counter}</p>
-        <button onClick={this.handleIncrement}>Increment</button>
+        <button onClick={this.handleIncrement}>Decrement</button>
       </div>
     )
   }
