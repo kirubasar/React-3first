@@ -3,10 +3,10 @@
 ## Contents:
 -[x] Components - In-depth
 -[ ] Component life cycle
--[ ] Stateful and stateless components
--[ ] Reusable commponents
--[ ] Passing dynamic data to component
--[ ] Introduction to Hook
+-[x] Stateful and stateless components
+-[x] Reusable commponents
+-[x] Passing dynamic data to component
+-[x] Introduction to Hook
 
 Components: Can be created in two ways:
 1. Functional components
@@ -25,3 +25,8 @@ Functional Components are better than class components for the following reasons
 - Functional  components can be better optimized by React/
 - Functional components are less code. 
 - Functional components are faster than class components.
+
+State:
+- a component's memory.
+- a component's memory is used to store data.
+- a component's

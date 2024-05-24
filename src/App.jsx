@@ -1,39 +1,27 @@
- //Functional Component
- /*const App = () => {
-return (
-  <div>
-    <h1> My React App</h1>
-  </div>
-)
- }
-
- export default App;*/
-
- // Functional Component with function 
- /*function App () {
-  return(
-    <div>
-    <h1> My React App</h1>
-  </div>
-)
- }
-
- export default App;*/
-import { Component } from "react";
-import Hello from "./components/Hello";
-
- //Class Component
- class App  extends Component{
-  // override the render method
+ import React, { Component } from 'react'
+ export class App extends Component{
+  constructor(props){
+    super(props);//call the constructor of the parent class
+  //set the initial state
+  this.state = {
+    counter: 0
+  }
+}
+  handleIncrement = () => {
+// update the state using the setState method
+this.setState({
+  counter: this.state.counter + 1
+})
+  }
   render(){
-    //return JSX
+    console.log(this.state);
     return (
       <div>
-        <Hello 
-        name="John"/>
+        <p> Count: {this.state.counter}</p>
+        <button onClick={this.handleIncrement}>Increment</button>
       </div>
-    
-   )
+    )
   }
  }
+
  export default App;
