@@ -20,13 +20,8 @@ return (
 
  export default App;*/
 import { Component } from "react";
-class Hello extends Component{
-  render(){
-    return(
-      <h1>Hello World</h1>
-    )
-  }
-}
+import Hello from "./components/Hello";
+
  //Class Component
  class App  extends Component{
   // override the render method
@@ -34,7 +29,8 @@ class Hello extends Component{
     //return JSX
     return (
       <div>
-        <Hello />
+        <Hello 
+        name="John"/>
       </div>
     
    )
