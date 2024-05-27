@@ -39,10 +39,15 @@ export class App extends Component {
 export default App;*/
 
 
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 
 const App= ()=> {
   let [count, setCount] =useState(0);
+useEffect(() =>{
+  console.log('Component mounted')
+})
+
+
   const handleIncrement = () => {
     setCount(count+1)
   }
@@ -53,6 +58,7 @@ const App= ()=> {
   const reset = () => {
     setCount(0)
   }
+
   return (
       <div>
         <h1>Counter: {count}</h1>
