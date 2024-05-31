@@ -1,36 +1,10 @@
 import React from 'react'
-import { useEffect } from 'react';
-import { useContext } from 'react';
 import { useState } from 'react';
 import { createContext } from 'react'
+import B from './components/B';
 const NameContext = createContext();
-const D = ()=>{
-    const {name, setName} = useContext(NameContext)
-    useEffect(()=>{
-        setTimeout(() =>{
-           setName('Kiruba');
-        }, 5000);
-    })
-    return(
-        <div>
-            <h1>Hello, {name}!</h1>
-        </div>
-    )
-}
-   
-const C =()=>{
-    return (
-        <D/>
-    )
-}
-const B =() =>{
-    return (
-        <C/>
-    )
-}
-
 const App =() => {
-    const [name, setName] = useState('sri')
+    const [name, setName] = useState('Sri')
   return (
     <NameContext.Provider value={{name, setName}}>
         <B/>
@@ -38,4 +12,4 @@ const App =() => {
   )
 }
 
-export default App
+export { App as default , NameContext};
