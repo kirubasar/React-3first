@@ -1,25 +1,20 @@
-import React, { useRef, useState } from 'react'
+import React, { useReducer } from 'react'
+import { countReducer, initialState } from './reducers/countReducer';
 
-const App = () => {
-  const [count, setCount] = useState(0);
-  const countRef = useRef(0);
-  const handleClick =()=>{
-    setCount(count+1)
+export const App = () => {
+  const [state, dispatch] = useReducer(countReducer, initialState);
+  const handleIncrement = ()=>{
+    dispatch ({type: "Increment"});
   }
-  const handleRefClick=()=>{
-    countRef.current +=1;
-    console.log(countRef.current)
+  const handleDecrement=()=>{
+    dispatch({type: "Decrement"});
   }
-  console.log('component rendered');
-
   return (
     <div>
-      <h1>State Count: {count}</h1>
-      <button onClick ={handleClick}>Increment State Count</button>
-      <h1>Ref Count:{countRef.current}</h1>
-      <button onClick={handleRefClick}>Increment Ref Count</button>
+      <h1>Count: {state.count}</h1>
+      <button onClick={handleIncrement}>Increment</button>
+      <button onClick={handleDecrement}>Decrement</button>
     </div>
   )
 }
-
-export default App
+export default App;
