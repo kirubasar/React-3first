@@ -1,17 +1,16 @@
-import { useContext, useEffect } from "react";
-import { NameContext } from "../App";
 
-const D = ({children})=>{
-    const {name, setName} = useContext(NameContext)
-    useEffect(()=>{
+import { useName } from "../contexts/NameContext";
+
+const D = ()=>{
+    const {name, setName} = useName();
+    /*useEffect(()=>{
         setTimeout(() =>{
            setName('Kiruba');
-        }, 5000);
-    })
+        }, 5000);*/
+    
     return(
         <div>
             <h1>Hello, {name}!</h1>
-            {children}
         </div>
     )
 }

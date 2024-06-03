@@ -1,10 +1,13 @@
 import D from "./D"
+import X from "./X";
 const C =()=> {
-   return( 
-    <D>
-        <h1> Hi, I'm a child of D!</h1>
-    </D>
-   )
+  return (
+    <div>
+        <D/>
+        <X/>
+    </div>
+    
+  )
    
 }
 export default C;

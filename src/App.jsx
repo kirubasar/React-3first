@@ -1,15 +1,15 @@
-import React from 'react'
-import { useState } from 'react';
-import { createContext } from 'react'
+
 import B from './components/B';
-const NameContext = createContext();
+import { NameProvider } from './contexts/NameContext';
+
 const App =() => {
-    const [name, setName] = useState('Sri')
+   
   return (
-    <NameContext.Provider value={{name, setName}}>
+    <NameProvider>
         <B/>
-    </NameContext.Provider>
+    </NameProvider>
+
   )
 }
 
-export { App as default , NameContext};
+export default App;
