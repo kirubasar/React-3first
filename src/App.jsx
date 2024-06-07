@@ -1,72 +1,14 @@
-import { useFormik } from 'formik'
-const validate = values =>{
-  const errors={};
-  if(!values.name){
-    errors.name='Name is required';
-  }
-  if(!values.email){
-    errors.email='Email is required';
-  }
-  if(!values.password){
-    errors.password='Password is required'
-  }
-
-return errors;
-}
-
+import { useDispatch, useSelector } from "react-redux";
+import { decrement, increment, selectCount } from "./features/counter/counterSlice"
 const App = () => {
-  const formik =useFormik({
-    initialValues: {
-      name:'',
-      email:'',
-      password:''
-    },
-    validate,
-    onSubmit: values=> {
-    console.log(values);
-  }
-  })
-  const style= {
-    color: 'red', 
-    fontWeight: 'italic'
-  }
-
+  const dispatch = useDispatch();
+  const count = useSelector(selectCount);
   return (
-    <form onSubmit={formik.handleSubmit}>
-     <div>
-      <input
-      type="text"
-      placeholder="Name..."
-      name="name"
-      id="name"
-      value={formik.values.name}
-      onChange={formik.handleChange}
-      />
-    </div>
-    <div style={style}>{formik.errors.name}</div>
-     <div>
-      <input
-      type="email"
-      placeholder="Email..."
-      name="email"
-      id="email"
-      value={formik.values.email}
-      onChange={formik.handleChange}/>
-    </div>
-    <div style={style}>{formik.errors.email}</div>
     <div>
-      <input
-      type="password"
-      placeholder="Possword..."
-      name="password"
-      id="password"
-      value={formik.values.password}
-      onChange={formik.handleChange}/>
+      <h1>Counter:{count}</h1>
+      <button onClick={()=>dispatch(increment)}>Increment</button>
+      <button onClick={()=>dispatch(decrement)}>Decrement</button>
     </div>
-    <div style={style}>{formik.errors.password}</div>
-    <button type="submit">Sign Up</button>
-    </form>
-   
   )
 }
 
