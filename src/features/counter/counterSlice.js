@@ -10,6 +10,7 @@ export const counterSlice = createSlice({
             state.value +=1;
         },
         decrement:(state, action)=>{
+            if(state.value > 0)
             state.value -=1;
         }
      }
